@@ -21,7 +21,7 @@
 }
 
 .navbar-default .navbar-nav > li > a {
-	color:white;
+	color:white;margin-left:-5px;
 }
 
 .dropdown-menu > li > a,
