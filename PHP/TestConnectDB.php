@@ -9,16 +9,17 @@
 
 <?php
 //Server local dùng để test web, chức năng
-$servername = "localhost";
+/*$servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "FindMyPet";
+$dbname = "FindMyPet";*/
 
 //Server internet dùng để nhập dữ liệu chung của nhóm
-/*$servername = "sql6.freemysqlhosting.net";
+$servername = "sql6.freemysqlhosting.net";
 $username = "sql685411";
 $password = "qK6!zD4%";
-$dbname = "sql685411";*/
+$dbname = "sql685411";
+
 
 // Tao ket noi
 $conn = new MySQLi($servername, $username, $password, $dbname);

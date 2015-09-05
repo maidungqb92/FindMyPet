@@ -1,0 +1,15 @@
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^([a-zA-Z]*)/?([a-zA-Z]*)?/?([a-zA-Z0-9]*)?/?$ index.php?controller=$1&action=$2&id=$3 [NC,L,QSA]
+RewriteRule ^trang-chu.html$ index.php?controller=home&action=index [QSA,L]
+RewriteRule ^dang-nhap.html$ index.php?controller=user&action=login [QSA,L]
+RewriteRule ^dang-ky.html$ index.php?controller=user&action=reg [QSA,L]
+RewriteRule ^san-pham.html$ index.php?controller=sanpham&action=index [QSA,L]
+RewriteRule ^san-pham+/([a-z0-9-]+).html$ index.php?controller=sanpham&action=$1 [QSA,L]
+RewriteRule ^san-pham+/[a-z0-9-]+/[a-z0-9-]+-([0-9]+).html$ index.php?controller=sanpham&action=chitiet&id=$1 [QSA,L]
+RewriteRule ^don-hang.html$ index.php?controller=donhang&action=index [QSA,L]
+RewriteRule ^don-hang+/[a-z0-9-]+-([0-9]+).html$ index.php?controller=donhang&action=success&id=$1 [QSA,L]
+
